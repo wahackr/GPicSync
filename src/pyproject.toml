@@ -1,0 +1,11 @@
+[project]
+name = "src"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "pillow>=12.1.1",
+    "unidecode>=1.4.0",
+    "wxpython>=4.2.5",
+]
