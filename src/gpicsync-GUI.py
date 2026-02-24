@@ -945,7 +945,11 @@ class GUI(wx.Frame):
                 or fnmatch.fnmatch ( fileName, '*.RAF' )\
                 or fnmatch.fnmatch ( fileName, '*.raf' )\
                 or fnmatch.fnmatch ( fileName, '*.MRW' )\
-                or fnmatch.fnmatch ( fileName, '*.mrw' ):
+                or fnmatch.fnmatch ( fileName, '*.mrw' )\
+                or fnmatch.fnmatch ( fileName, '*.HEIF' )\
+                or fnmatch.fnmatch ( fileName, '*.heif' )\
+                or fnmatch.fnmatch ( fileName, '*.HEIC' )\
+                or fnmatch.fnmatch ( fileName, '*.heic' ):
 
                     print ("\nFound fileName ",fileName," Processing now ...")
                     wx.CallAfter(self.consolePrint,"\n"+("(Found ")+fileName+" ...")
@@ -958,7 +962,9 @@ class GUI(wx.Frame):
                         shutil.copyfile(self.picDir+'/'+fileName,backupFolder+fileName)
 
                     #Create thumb and make a preview
-                    if fnmatch.fnmatch (fileName, '*.JPG') or fnmatch.fnmatch (fileName, '*.jpg'):
+                    if fnmatch.fnmatch (fileName, '*.JPG') or fnmatch.fnmatch (fileName, '*.jpg') \
+                    or fnmatch.fnmatch (fileName, '*.HEIF') or fnmatch.fnmatch (fileName, '*.heif') \
+                    or fnmatch.fnmatch (fileName, '*.HEIC') or fnmatch.fnmatch (fileName, '*.heic'):
                         print ("Create a thumb now!")
                         try:
                             im=Image.open(self.picDir+'/'+fileName)

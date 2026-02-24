@@ -310,6 +310,8 @@ if __name__=="__main__":
     folder="C:/Documents and Settings/franz/Bureau/gpicsync.googlecode.com/trunk/GE-test"
     myKml=KML(folder+"/test") # deprecated see __init__
     for fileName in os.listdir ( folder ):
-        if fnmatch.fnmatch (fileName, '*.JPG') or fnmatch.fnmatch (fileName, '*.jpg'):
+        if fnmatch.fnmatch (fileName, '*.JPG') or fnmatch.fnmatch (fileName, '*.jpg') \
+        or fnmatch.fnmatch (fileName, '*.HEIF') or fnmatch.fnmatch (fileName, '*.heif') \
+        or fnmatch.fnmatch (fileName, '*.HEIC') or fnmatch.fnmatch (fileName, '*.heic'):
             myKml.placemark(folder+"/"+fileName)
     myKml.close()

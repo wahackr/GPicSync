@@ -234,7 +234,11 @@ def getFileList(dir):
          or fnmatch.fnmatch ( fileName, '*.RAF' )
          or fnmatch.fnmatch ( fileName, '*.raf' )
          or fnmatch.fnmatch ( fileName, '*.MRW' )
-         or fnmatch.fnmatch ( fileName, '*.mrw' )):
+         or fnmatch.fnmatch ( fileName, '*.mrw' )
+         or fnmatch.fnmatch ( fileName, '*.HEIF' )
+         or fnmatch.fnmatch ( fileName, '*.heif' )
+         or fnmatch.fnmatch ( fileName, '*.HEIC' )
+         or fnmatch.fnmatch ( fileName, '*.heic' )):
             yield fileName, options.dir+'/'+fileName
 
 if __name__=="__main__":
